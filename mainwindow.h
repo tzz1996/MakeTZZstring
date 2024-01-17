@@ -46,7 +46,7 @@ public:
     void writeZ();
 
     void overWriteA();
-    void overWriteE();
+    void overWriteE(char letter);
 
 
 private slots:

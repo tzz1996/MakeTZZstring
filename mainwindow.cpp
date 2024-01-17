@@ -276,8 +276,17 @@ void MainWindow::overWriteA()
 
 }
 
-void MainWindow::overWriteE()
+void MainWindow::overWriteE(char letter)
 {
+    QStringList* p_strList = NULL;
+    if (letter == 'A')
+    {
+        p_strList = &m_A;
+    }
+    else if (letter == 'E')
+    {
+        p_strList = &m_E;
+    }
     //
     // open file
     //
@@ -299,14 +308,16 @@ void MainWindow::overWriteE()
     for (int i = 0; i < 5; i++)
     {
         QString line = lines[i];
+        QStringList tmp = *p_strList;
+
         int index = line.lastIndexOf("\n");
         if (index >= 0)
         {
-            line.insert(index, m_E[i]);
+            line.insert(index, tmp[i]);
         }
         else
         {
-            line.append(m_E[i]);
+            line.append(tmp[i]);
         }
         lines[i] = line;
     }
@@ -328,6 +339,6 @@ void MainWindow::on_pushButton_clicked()
 
     makeList();
     WriteStr(num_str);
-    overWriteE();
+    overWriteE('E');
 
 }
