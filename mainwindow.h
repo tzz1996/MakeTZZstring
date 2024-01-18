@@ -19,6 +19,7 @@ public:
     void MakeList();
 
     bool TxtFormatOK();
+    void MappingPointer(QChar ch, QStringList** p_strList);
     void AppendLetter(QChar letter);
 
 private slots:
@@ -53,6 +54,19 @@ private:
     QStringList m_X;
     QStringList m_Y;
     QStringList m_Z;
+
+    QStringList m_0;
+    QStringList m_1;
+    QStringList m_2;
+    QStringList m_3;
+    QStringList m_4;
+    QStringList m_5;
+    QStringList m_6;
+    QStringList m_7;
+    QStringList m_8;
+    QStringList m_9;
+
+    QStringList m_POINT;
     QStringList m_SPACE;
 };
 

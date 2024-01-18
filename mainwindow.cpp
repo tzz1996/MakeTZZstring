@@ -227,6 +227,78 @@ void MainWindow::MakeList()
     m_Z.append("  @   ");
     m_Z.append(" @@@@@");
     //
+    // make 1
+    //
+    m_1.append(" @@ ");
+    m_1.append("  @ ");
+    m_1.append("  @ ");
+    m_1.append("  @ ");
+    m_1.append(" @@@");
+    //
+    // make 2
+    //
+    m_2.append(" @@@@");
+    m_2.append("    @");
+    m_2.append(" @@@@");
+    m_2.append(" @   ");
+    m_2.append(" @@@@");
+    //
+    // make 3
+    //
+    m_3.append(" @@@@");
+    m_3.append("    @");
+    m_3.append(" @@@@");
+    m_3.append("    @");
+    m_3.append(" @@@@");
+    //
+    // make 4
+    //
+    m_4.append(" @  @  ");
+    m_4.append(" @  @  ");
+    m_4.append(" @@@@@@");
+    m_4.append("    @  ");
+    m_4.append("    @  ");
+    //
+    // make 5
+    //
+    m_5.append(" @@@@");
+    m_5.append(" @   ");
+    m_5.append(" @@@@");
+    m_5.append("    @");
+    m_5.append(" @@@@");
+    //
+    // make 6
+    //
+    m_6.append(" @@@@");
+    m_6.append(" @   ");
+    m_6.append(" @@@@");
+    m_6.append(" @  @");
+    m_6.append(" @@@@");
+    //
+    // make 7
+    //
+    m_7.append(" @@@@");
+    m_7.append("    @");
+    m_7.append("    @");
+    m_7.append("    @");
+    m_7.append("    @");
+    //
+    // make 8
+    //
+    m_8.append(" @@@@");
+    m_8.append(" @  @");
+    m_8.append(" @@@@");
+    m_8.append(" @  @");
+    m_8.append(" @@@@");
+    //
+    // make 9
+    //
+    m_9.append(" @@@@");
+    m_9.append(" @  @");
+    m_9.append(" @@@@");
+    m_9.append("    @");
+    m_9.append(" @@@@");
+    //
     // make SPACE
     //
     m_SPACE.append("     ");
@@ -234,6 +306,14 @@ void MainWindow::MakeList()
     m_SPACE.append("     ");
     m_SPACE.append("     ");
     m_SPACE.append("     ");
+    //
+    // make POINT
+    //
+    m_POINT.append("   ");
+    m_POINT.append("   ");
+    m_POINT.append("   ");
+    m_POINT.append(" @@");
+    m_POINT.append(" @@");
 }
 
 bool MainWindow::TxtFormatOK()
@@ -272,14 +352,131 @@ bool MainWindow::TxtFormatOK()
     return false;
 }
 
-void MainWindow::WriteStr(QString str_input)
+void MainWindow::MappingPointer(QChar ch, QStringList** p_strList)
 {
     //
-    // write string
+    // 映射字母内容
     //
-    for (QChar letter: str_input)
+    switch (ch.toLatin1())
     {
-        AppendLetter(letter);
+    case 'A':
+        *p_strList = &m_A;
+        break;
+    case 'B':
+        *p_strList = &m_B;
+        break;
+    case 'C':
+        *p_strList = &m_C;
+        break;
+    case 'D':
+        *p_strList = &m_D;
+        break;
+    case 'E':
+        *p_strList = &m_E;
+        break;
+    case 'F':
+        *p_strList = &m_F;
+        break;
+    case 'G':
+        *p_strList = &m_G;
+        break;
+    case 'H':
+        *p_strList = &m_H;
+        break;
+    case 'I':
+        *p_strList = &m_I;
+        break;
+    case 'J':
+        *p_strList = &m_J;
+        break;
+    case 'K':
+        *p_strList = &m_K;
+        break;
+    case 'L':
+        *p_strList = &m_L;
+        break;
+    case 'M':
+        *p_strList = &m_M;
+        break;
+    case 'N':
+        *p_strList = &m_N;
+        break;
+    case 'O':
+        *p_strList = &m_O;
+        break;
+    case 'P':
+        *p_strList = &m_P;
+        break;
+    case 'Q':
+        *p_strList = &m_Q;
+        break;
+    case 'R':
+        *p_strList = &m_R;
+        break;
+    case 'S':
+        *p_strList = &m_S;
+        break;
+    case 'T':
+        *p_strList = &m_T;
+        break;
+    case 'U':
+        *p_strList = &m_U;
+        break;
+    case 'V':
+        *p_strList = &m_V;
+        break;
+    case 'W':
+        *p_strList = &m_W;
+        break;
+    case 'X':
+        *p_strList = &m_X;
+        break;
+    case 'Y':
+        *p_strList = &m_Y;
+        break;
+    case 'Z':
+        *p_strList = &m_Z;
+        break;
+    case '0':
+        *p_strList = &m_0;
+        break;
+    case '1':
+        *p_strList = &m_1;
+        break;
+    case '2':
+        *p_strList = &m_2;
+        break;
+    case '3':
+        *p_strList = &m_3;
+        break;
+    case '4':
+        *p_strList = &m_4;
+        break;
+    case '5':
+        *p_strList = &m_5;
+        break;
+    case '6':
+        *p_strList = &m_6;
+        break;
+    case '7':
+        *p_strList = &m_7;
+        break;
+    case '8':
+        *p_strList = &m_8;
+        break;
+    case '9':
+        *p_strList = &m_9;
+        break;
+    case ' ':
+        *p_strList = &m_SPACE;
+        break;
+    case '.':
+        *p_strList = &m_POINT;
+        break;
+    default:
+        qDebug() << "请输入大写字母或空格！";
+        return;
+        break;
     }
 }
 
@@ -297,119 +494,7 @@ void MainWindow::AppendLetter(QChar letter)
     // 映射字母内容
     //
     QStringList* p_strList = NULL;
-    if (letter == 'A')
-    {
-        p_strList = &m_A;
-    }
-    else if (letter == 'B')
-    {
-        p_strList = &m_B;
-    }
-    else if (letter == 'C')
-    {
-        p_strList = &m_C;
-    }
-    else if (letter == 'D')
-    {
-        p_strList = &m_D;
-    }
-    else if (letter == 'E')
-    {
-        p_strList = &m_E;
-    }
-    else if (letter == 'F')
-    {
-        p_strList = &m_F;
-    }
-    else if (letter == 'G')
-    {
-        p_strList = &m_G;
-    }
-    else if (letter == 'H')
-    {
-        p_strList = &m_H;
-    }
-    else if (letter == 'I')
-    {
-        p_strList = &m_I;
-    }
-    else if (letter == 'J')
-    {
-        p_strList = &m_J;
-    }
-    else if (letter == 'K')
-    {
-        p_strList = &m_K;
-    }
-    else if (letter == 'L')
-    {
-        p_strList = &m_L;
-    }
-    else if (letter == 'M')
-    {
-        p_strList = &m_M;
-    }
-    else if (letter == 'N')
-    {
-        p_strList = &m_N;
-    }
-    else if (letter == 'O')
-    {
-        p_strList = &m_O;
-    }
-    else if (letter == 'P')
-    {
-        p_strList = &m_P;
-    }
-    else if (letter == 'Q')
-    {
-        p_strList = &m_Q;
-    }
-    else if (letter == 'R')
-    {
-        p_strList = &m_R;
-    }
-    else if (letter == 'S')
-    {
-        p_strList = &m_S;
-    }
-    else if (letter == 'T')
-    {
-        p_strList = &m_T;
-    }
-    else if (letter == 'U')
-    {
-        p_strList = &m_U;
-    }
-    else if (letter == 'V')
-    {
-        p_strList = &m_V;
-    }
-    else if (letter == 'W')
-    {
-        p_strList = &m_W;
-    }
-    else if (letter == 'X')
-    {
-        p_strList = &m_X;
-    }
-    else if (letter == 'Y')
-    {
-        p_strList = &m_Y;
-    }
-    else if (letter == 'Z')
-    {
-        p_strList = &m_Z;
-    }
-    else if (letter == ' ')
-    {
-        p_strList = &m_SPACE;
-    }
-    else
-    {
-        qDebug() << "请输入大写字母或空格！";
-        return;
-    }
+    MappingPointer(letter, &p_strList);
     //
     // open file
     //
@@ -456,6 +541,17 @@ void MainWindow::AppendLetter(QChar letter)
     }
 
     file.close();
+}
+
+void MainWindow::WriteStr(QString str_input)
+{
+    //
+    // write string
+    //
+    for (QChar letter: str_input)
+    {
+        AppendLetter(letter);
+    }
 }
 
 void MainWindow::on_pushButton_clicked()
