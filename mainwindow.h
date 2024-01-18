@@ -16,38 +16,10 @@ public:
     ~MainWindow();
 
     void WriteStr(QString str_input);
-    void makeList();
+    void MakeList();
 
-    void writeA();
-    void writeB();
-    void writeC();
-    void writeD();
-    void writeE();
-    void writeF();
-    void writeG();
-    void writeH();
-    void writeI();
-    void writeJ();
-    void writeK();
-    void writeL();
-    void writeM();
-    void writeN();
-    void writeO();
-    void writeP();
-    void writeQ();
-    void writeR();
-    void writeS();
-    void writeT();
-    void writeU();
-    void writeV();
-    void writeW();
-    void writeX();
-    void writeY();
-    void writeZ();
-
-    void overWriteA();
-    void overWriteE(char letter);
-
+    bool TxtFormatOK();
+    void AppendLetter(QChar letter);
 
 private slots:
     void on_pushButton_clicked();
@@ -81,6 +53,7 @@ private:
     QStringList m_X;
     QStringList m_Y;
     QStringList m_Z;
+    QStringList m_SPACE;
 };
 
 #endif // MAINWINDOW_H
