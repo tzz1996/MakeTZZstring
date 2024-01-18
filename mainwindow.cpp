@@ -117,11 +117,11 @@ void MainWindow::MakeList()
     //
     // make M
     //
-    m_M.append(" @@   @@");
-    m_M.append(" @ @ @ @");
-    m_M.append(" @  @  @");
-    m_M.append(" @  @  @");
-    m_M.append(" @  @  @");
+    m_M.append(" @   @");
+    m_M.append(" @@ @@");
+    m_M.append(" @ @ @");
+    m_M.append(" @ @ @");
+    m_M.append(" @ @ @");
     //
     // make N
     //
