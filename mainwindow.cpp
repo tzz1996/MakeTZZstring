@@ -227,6 +227,14 @@ void MainWindow::MakeList()
     m_Z.append("  @   ");
     m_Z.append(" @@@@@");
     //
+    // make 0
+    //
+    m_0.append(" @@@@");
+    m_0.append(" @  @");
+    m_0.append(" @  @");
+    m_0.append(" @  @");
+    m_0.append(" @@@@");
+    //
     // make 1
     //
     m_1.append(" @@ ");
