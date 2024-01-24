@@ -322,6 +322,14 @@ void MainWindow::MakeList()
     m_POINT.append("   ");
     m_POINT.append(" @@");
     m_POINT.append(" @@");
+    //
+    // make #
+    //
+    m_SIGN.append("   @  @  ");
+    m_SIGN.append(" @@@@@@@@");
+    m_SIGN.append("   @  @  ");
+    m_SIGN.append(" @@@@@@@@");
+    m_SIGN.append("   @  @  ");
 }
 
 bool MainWindow::TxtFormatOK()
@@ -480,6 +488,9 @@ void MainWindow::MappingPointer(QChar ch, QStringList** p_strList)
         break;
     case '.':
         *p_strList = &m_POINT;
+        break;
+    case '#':
+        *p_strList = &m_SIGN;
         break;
     default:
         qDebug() << "请输入大写字母或空格！";

@@ -68,6 +68,7 @@ private:
 
     QStringList m_POINT;
     QStringList m_SPACE;
+    QStringList m_SIGN;
 };
 
 #endif // MAINWINDOW_H
