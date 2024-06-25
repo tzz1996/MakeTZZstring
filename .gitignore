@@ -1,3 +1,4 @@
+# for qt
 .qmake.stash
 debug
 release
@@ -6,3 +7,7 @@ Makefile*
 ui_*
 *.dll
 *.qm
+
+# for python
+__pycache_
+*.pyc_
