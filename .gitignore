@@ -7,6 +7,9 @@ Makefile*
 ui_*
 *.dll
 *.qm
+*.o
+moc_*
+test
 
 # for python
 __pycache_
