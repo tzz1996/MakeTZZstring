@@ -1,3 +1,5 @@
+import os
+
 #
 # 创建字母或数字或字符
 #
@@ -437,11 +439,14 @@ def make_tzz_str():
         print(line)
         
     with open('./output.txt', 'w', encoding='utf-8') as file:
-        for line in combined_lines:
-            file.write(line + "\n")
-        
-
+        # for line in combined_lines:
+            # file.write(line + "\n")
+            
+        # 一次性写入所有行，提升效率
+        file.writelines(line + "\n" for line in combined_lines)
     
+    print("输出字符位于：" + os.path.dirname(__file__) + "\\output.txt")
+
 #
 # test
 #
