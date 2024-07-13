@@ -435,6 +435,11 @@ def make_tzz_str():
 
     for line in combined_lines:
         print(line)
+        
+    with open('./output.txt', 'w', encoding='utf-8') as file:
+        for line in combined_lines:
+            file.write(line + "\n")
+        
 
     
 #
