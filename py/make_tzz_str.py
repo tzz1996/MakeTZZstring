@@ -101,11 +101,11 @@ def make_letter(choose_letter):
 """
 
     letter_M = """
- @   @
- @@ @@
- @ @ @
- @ @ @
- @ @ @
+ @@   @@
+ @ @ @ @
+ @  @  @
+ @  @  @
+ @  @  @
 """
 
     letter_N = """
@@ -398,7 +398,7 @@ def make_letter(choose_letter):
 # 获取输入字符串
 #
 def get_input_str():
-    user_input = input("请输入字符串：")
+    user_input = input("please input your string: ")
 
     return user_input
 #
@@ -445,7 +445,7 @@ def make_tzz_str():
         # 一次性写入所有行，提升效率
         file.writelines(line + "\n" for line in combined_lines)
     
-    print("输出字符位于：" + os.path.dirname(__file__) + "\\output.txt")
+    print("output is at: " + os.path.dirname(__file__) + "\\output.txt")
 
 #
 # test
